@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:jsf="http://xmlns.jcp.org/jsf"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <h:outputStylesheet name="jquery-ui.min.css" library="css"/>
+    <h:outputStylesheet name="jquery-ui.structure.min.css" library="css"/>
+    <h:outputStylesheet name="jquery-ui.theme.min.css" library="css"/>
+    <h:outputStylesheet name="style.min.css" library="css"/>
+    <h:outputStylesheet name="style.css" library="css"/>
+
+</h:head>
+<h:body>
+
+
+    <div id="wrapper">
+        <div id="menu">
+            <p class="welcome">Welcome <b></b></p>
+            <p class="logout"><a id="exit" href="#">Exit Chat</a></p>
+        </div>
+        <div id="chatbox">
+            <table>
+                <thead id="user">
+
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+
+        </div>
+        <h:form prependId="false">
+
+            <h:inputText id="usermsg" value="#{proxy.chatContent}" size="63"/>
+            <h:commandButton id="postBtn" value="send">
+                <f:ajax/>
+            </h:commandButton>
+        </h:form>
+
+    </div>
+
+
+    <h:outputScript name="jquery-1.11.1.min.js" library="js"/>
+    <h:outputScript name="jquery-ui.min.js" library="js"/>
+    <h:outputScript name="chatclient.js" library="js"/>
+</h:body>
+</html>

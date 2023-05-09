@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:jsf="http://xmlns.jcp.org/jsf"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Register Dialog</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</h:head>
+<h:body id="divId">
+    <h:form prependId="false">
+        <h3>Please enter your name and register:</h3>
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td>
+                    <h:inputText id="userName" value="#{proxy.chatContent}"/>
+                </td>
+                <td>
+                    <h:commandButton id="submitName" value="Register">
+                        <f:ajax/>
+                    </h:commandButton>
+                </td>
+
+            </tr>
+
+        </table>
+
+    </h:form>
+
+    <h:outputScript name="jquery-1.11.1.min.js" library="js"/>
+    <h:outputScript name="jquery-ui.min.js" library="js"/>
+    <h:outputScript name="chatclient.js" library="js"/>
+
+</h:body>
+</html>
